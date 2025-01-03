@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin: 0px;
+        }
+        nav{
+            position: relative;
+            width: 100%;
+            height: 80px;
+            background-color: #222;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav a{
+            position: relative;
+            display: inline-block;
+            font-size: 1em;
+            font-weight: 500;
+            color: #fff;
+            text-decoration: none;
+            padding: 0 23px;
+            z-index: 1;
+        }
+        nav span{
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 95px;
+            height: 100%;
+            background: linear-gradient(45deg,#4f1919,#ff3333);
+            border-radius: 8px;
+            transition: .5s;
+
+        }
+        nav a:nth-child(1):hover~span
+        {
+            left: 20%;
+        }
+        nav a:nth-child(2):hover~span
+        {
+            left: 28%;
+            width: 110px;
+        }
+        nav a:nth-child(3):hover~span
+        {
+            left: 38%;
+            width: 135px;
+        }
+        nav a:nth-child(4):hover~span
+        {
+            left: 49%;
+            width: 135px;
+        }
+        nav a:nth-child(5):hover~span
+        {
+            left: 59%;
+            width: 120px;
+        }
+        nav a:nth-child(6):hover~span
+        {
+            left: 69%;
+            width: 135px;
+        }
+            #main{
+                width: 100%;
+                height: 40vh;
+                background-color: aqua;
+                display: flex;
+                justify-content: center;
+                background-image: url("C:/Users/mundr/OneDrive/Desktop/AR copiers/AR images/ar2m.jpg");
+                padding-top: 200px;
+                background-repeat: no-repeat;
+                background-size: 100% 100vh;
+            }
+            #range{
+                width: 100%;
+                height: 9vh;
+                background-color: darkgray;
+                padding-top: 25px;
+                /* display: flex; */
+                /* justify-content: center; */
+            }
+            #info{
+                width: 100%;
+                height: 60vh;
+                /* background-color: darkslategrey; */
+                background-image: linear-gradient(180deg, #6b9dc9, #fffde4);
+                display: flex;
+                justify-content: space-evenly;
+                padding-top: 100px;
+            }
+            #in{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                /* display: flex; */
+                /* background-image: linear-gradient(180deg, #005aa7, #fffde4); */
+                justify-content: center;
+               
+            }
+            #in1{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                display: flex;
+                /* background-image: linear-gradient(180deg, #005aa7, #fffde4); */
+                justify-content: center;
+            }
+            #in2{
+                width: 30%;
+                height: 50vh;
+                /* background-color: burlywood; */
+                /* justify-content: center; */
+                /* background-image: linear-gradient(180deg, #005aa7, #fffde4); */
+            }
+
+            #low{
+                width: 100%;
+                height: 60vh;
+                /* background-color: darkslategrey; */
+                display: flex;
+                background-image: linear-gradient(180deg,#fffde4, #6b9dc9 );
+                justify-content: space-evenly;
+                padding-top: 100px;
+            }
+            #lowr{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                /* display: flex; */
+                justify-content: center;
+               
+            }
+            #lowr1{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                display: flex;
+                justify-content: center;
+            }
+            #lowr2{
+                width: 30%;
+                height: 50vh;
+                /* background-color: burlywood; */
+                /* justify-content: center; */
+            }
+
+            #mid{
+                width: 100%;
+                height: 60vh;
+                /* background-color: darkslategrey; */
+                display: flex;
+                background-image: linear-gradient(180deg, #6b9dc9, #fffde4);
+                justify-content: space-evenly;
+                padding-top: 100px;
+            }
+            #midr{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                /* display: flex; */
+                justify-content: center;
+               
+            }
+            #midr1{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                display: flex;
+                justify-content: center;
+            }
+            #midr2{
+                width: 30%;
+                height: 50vh;
+                /* background-color: burlywood; */
+                /* justify-content: center; */
+            }
+
+            #high{
+                width: 100%;
+                height: 60vh;
+                /* background-color: darkslategrey; */
+                display: flex;
+                background-image: linear-gradient(180deg,#fffde4, #6b9dc9);
+                justify-content: space-evenly;
+                padding-top: 100px;
+            }
+            #highr{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                /* display: flex; */
+                justify-content: center;
+               
+            }
+            #highr1{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                display: flex;
+                justify-content: center;
+            }
+            #highr2{
+                width: 30%;
+                height: 50vh;
+                /* background-color: burlywood; */
+                /* justify-content: center; */
+            }
+            #color{
+                width: 100%;
+                height: 60vh;
+                /* background-color: darkslategrey; */
+                display: flex;
+                background-image: linear-gradient(180deg, #6b9dc9, #fffde4);
+                justify-content: space-evenly;
+                padding-top: 100px;
+            }
+            #colorr{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                /* display: flex; */
+                justify-content: center;
+               
+            }
+            #colorr1{
+                width: 30%;
+                height: 50vh;
+                /* background-color: darkorchid; */
+                display: flex;
+                justify-content: center;
+            }
+            #colorr2{
+                width: 30%;
+                height: 50vh;
+                /* background-color: burlywood; */
+                /* justify-content: center; */
+            }
+
+            #bt{
+                width: 25%;
+                height: 40px;
+                /* background-color: aquamarine; */
+                justify-content: center;
+                
+            }
+            #bts{
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            #cnm{
+                width: 45%;
+                height: 50vh;
+                background-color: aquamarine;
+                /* float: left; */
+                /* display: flex;
+                justify-content: space-evenly; */
+            }
+            #cnf{
+                width: 30%;
+                height: 50vh;
+                background-color: burlywood;
+                /* float: left; */
+                /* display: flex; */
+                /* position: absolute; */
+                /* justify-content: space-evenly; */
+            }
+            .contact{
+                width: 100%;
+                height: 75vh;
+                /* background-color: cornflowerblue; */
+                background-image: linear-gradient(180deg,#fffde4, #6b9dc9 );
+                /* padding-top: 80px; */
+                /* display: flex; */
+                /* justify-content: space-evenly;
+                float: left;
+                 */
+            }
+            
+            #footer{
+                width: 100%;
+                height: 8vh;
+                background-color: aquamarine;
+            }
+            #sub{
+                width: 15%;
+                height: 30px;
+            }
+            #us{
+                width: 100%;
+                height: 8vh;
+                /* background-color: lightcoral; */
+                /* display: flex; */
+                padding-top: 3vh;
+            }
+            #fm{
+                width: 100%;
+                height: 59vh;
+                /* background-color: darkkhaki; */
+                padding-top:5vh;
+                justify-content: space-evenly;
+                display: flex;
+                /* justify-content: center; */
+            }
+            #cnf1{
+                width: 100%;
+                height: 12vh;
+                /* background-color: brown; */
+            }
+            #cnf2{
+                width: 100%;
+                height: 12vh;
+                /* background-color: darkblue; */
+            }
+            #cnf3{
+                width: 100%;
+                height: 12vh;
+                /* background-color: darkorange; */
+            }
+    </style>
+    <script src="./AR .js" defer></script>
+</head>
+<body>
+    <nav>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">WHY RENTAL</a>
+        <a href="#">PRODUCTS</a>
+        <a href="#">DRIVERS</a>
+        <a href="#">CONTACT US</a>
+        <span></span>
+    </nav>
+    <div id="main"> 
+        <h1>AR COPIERS PRODUCTS</h1>
+    </div>
+    <div id="range"> 
+        <center>
+            <a href="#section1"><input id="sub" type="submit" value="Desktop Printers"></a>
+            <a href="#section2"><input id="sub" type="submit" value="Low Range Printers"></a>
+            <a href="#section3"><input id="sub" type="submit" value="Mid Range Printers"></a>
+            <a href="#section4"><input id="sub" type="submit" value="High Range Printers"></a>
+            <a href="#section5"><input id="sub" type="submit" value="Color Printers"></a>
+        </center>
+    </div>
+    <div>
+        <div id="section1">
+    <div id="info">
+        <div id="in">
+            <br><br><br><br><br>
+            <h1>Canon Laser Shot</h1>
+            <br>
+            <h3>Single Function Monochrome Laser Printer</h3>
+            <br>
+            <h4>Simple; Compact performer;Hi-Speed USB 2.0 port,
+                Supports duplex printing, Affordable professional print quality;
+                 The perfect fit for business.</h4>
+        </div>
+        <div id="in1"><img src="./AR images/desk.png" alt=""></div>
+        <div id="in2">
+            <br>
+            <h2>SPECIFICATIONS:</h2>
+            <br>
+            <h5> * PPM                  UP TO 14</h5>
+            <h5> * COPY                 BLACK AND WHITE</h5>
+            <h5> * SCAN                 NOT APPLICABLE</h5>
+            <h5> * FAX                  NOT APPLICABLE</h5>
+            <h5> * MEMORY               2 MB</h5>
+            <h5> * FEEDER               NOT APPLICABLE</h5>
+            <h5> * NETWORK              USB</h5>
+            <h5> * PRINT RESOLUTION     1200 DPI</h5>
+            <br><br>
+            <div id="bts">
+            <input type="button" value="7680808355" id="bt">
+            <input type="submit" name="Get Quotation" id="bt">
+             </div>
+        </div>
+    </div>
+        </div>
+        <div id="section2">
+    <div id="low">
+        <div id="lowr">
+            <br><br><br><br>
+            <h1>CANON IMAGERUNNER</h1>
+            <br>
+            <h3>Features of Canon Imagerunner</h3>
+            <br>
+            <h4>The new canon imagerunner is designed with efficiency and usability in mind.
+                 Boosting a print speed of 33ppm, the device also comes with a wide range
+                  of functions designed to provide an enhanced experience.</h4>
+
+        </div>
+        <div id="lowr1">
+            <img src="./AR images/low.png" alt="">
+        </div>
+        <div id="lowr2">
+            <br>
+            <h2>SPECIFICATIONS:</h2>
+            <br>
+            <h5>* MULTI-TASKING SYSTEM FOR COPY, PRINT, SCAN AND FAX FUNCTIONS</h5>
+            <h5>*  33 PPM OUTPUT</h5>
+            <h5>*  COMPACT DESIGN</h5>
+            <h5>* TIME-SAVING MULTI IMAGE SERVER</h5>
+            <h5>* EASY AND EFFICIENT OPERATION</h5>
+            <h5>* HIGH CAPACITY PAPER SUPPLY</h5>
+            <h5>*  FLEXIBLE FINISHING FUNCTIONS</h5>
+            <br><br>
+            <div id="bts">
+                <input type="button" value="7680808355" id="bt">
+                <input type="submit" name="Get Quotation" id="bt">
+           </div>
+
+        </div>
+    </div>
+</div>
+<div id="section3">
+    <div id="mid">
+        <div id="midr">
+            <br><br><br><br>
+            <h1>CANON IMAGERUNNER</h1>
+            <br>
+            <h3>Features of Canon Imagerunner</h3>
+            <br>
+            <h4>The new canon imagerunner is designed with efficiency and usability in mind.
+                 Boosting a print speed of 45ppm, the device also comes with a wide range 
+                 of functions designed to provide an enhanced experience.</h4>
+
+        </div>
+        <div id="midr1">
+            <img src="./AR images/mid.png" alt="">
+        </div>
+        <div id="midr2">
+            <br>
+            <h2>SPECIFICATIONS:</h2>
+            <br>
+            <h5>*  MULTIFUNCTIONAL OPTIONS - COPY - PRINT - FAX - SCAN, NETWORK</h5>
+            <h5>*  25 - 45 PPM OUTPUT</h5>
+            <h5>*  BUILT IN DUPLEX</h5>
+            <h5>*  DIGITAL COPYING</h5>
+            <h5>*  2 TRAYS ONLINE</h5>
+            <h5>*  COMPACT AND RELIABLE DESIGN</h5>
+            <h5>* PRINTING - NETWORK UFR/PCL PRINT PRE-INSTALLED</h5>
+            <h5>* PROFESSIONAL IMAGE QUALITY</h5>
+            <h5>* NETWORK PRINTING CAPABILITY</h5>
+            <br><br>
+            
+            <div id="bts">
+                <input type="button" value="7680808355" id="bt">
+                <input type="submit" name="Get Quotation" id="bt">
+           </div>
+
+        </div>
+    </div>
+</div>
+<div id="section4">
+    <div id="high">
+        <div id="highr">
+            <br><br><br><br>
+            <h1>CANON IMAGERUNNER</h1>
+            <br>
+            <h3>Features of Canon Imagerunner</h3>
+            <br>
+            <h4>The new CANON IMAGERUNNER is designed with efficiency and usability in mind.
+                 Boosting a print speed of 105ppm, the device also comes with a wide range
+                  of functions designed to provide an enhanced experience.</h4>
+
+        </div>
+        <div id="highr1">
+            <img src="./AR images/high.png" alt="">
+        </div>
+        <div id="highr2">
+            <br>
+            <h2>SPECIFICATIONS:</h2>
+            <br>
+            <h5>* POWERFUL PRODUCTION AT 105 PPM</h5>
+            <h5>*  HIGH QUALITY PRINTING AND COPYING</h5>
+            <h5>* INTEGRATES SEAMLESSLY INTO YOUR EXISTING ENVIRONMENT</h5>
+            <h5>* PROFESSIONAL DOCUMENT PRODUCTION AT SPEED</h5>
+            <h5>* LARGE TOUCH-SCREEN OPERATION</h5>
+            <h5>* MAXIMUM PRINT SIZE :A3</h5>
+            <h5>*  FLEXIBLE FINISHING FUNCTIONS</h5>
+            <br>
+            <div id="bts">
+                <input type="button" value="7680808355" id="bt">
+                <input type="submit" name="Get Quotation" id="bt">
+           </div>
+
+        </div>
+    </div>
+</div>
+<div id="section5">
+    <div id="color">
+        <div id="colorr">
+            <br><br><br><br>
+            <h1>KONICA MINOLTA BIZHUB PRINTER</h1>
+            <br>
+            <h3>Features of KONICA MINOLTA BIZHUB</h3>
+            <br>
+            <h4>The new KONICA MINOLTA BIZHUB is designed with efficiency and usability in mind.
+                 Boosting a print speed of 50ppm, the device also comes with a wide range 
+                 of functions designed to provide an enhanced experience.</h4>
+
+        </div>
+        <div id="colorr1">
+            <img src="./AR images/color.png" alt="">
+        </div>
+        <div id="colorr2">
+            <br>
+            <h2>SPECIFICATIONS:</h2>
+            <br>
+            <h5> * SPEED AT 20 - 50 PPM COLOR</h5>
+            <h5> * LOW ENERGY CONSUMPTION</h5>
+            <h5> * QUIET OPERATION</h5>
+            <h5> * TWO-SIDED PRINTING / CENTRALIZED PRINT</h5>
+            <h5> * ADMINISTRATION DESIGN CONCERN FOR RESOURCE SAVINGS ENERGY STAR BLUE ANGEL</h5>
+            <h5> * ELIMINATING USE OF TOXIC MATERIALS</h5>
+            <h5> * INFORMATION-LINE GUIDANCE COLOUR LCD</h5>
+            <h5> * MAXIMUM PRINT SIZE:12 * 18. BANNER PRINTING POSSIBLE</h5>
+            <h5> * MAXIMUM PAPER THICKNESS : 300 GSM.</h5>
+            <br>
+            <div id="bts">
+                <input type="button" value="7680808355" id="bt">
+                <input type="submit" name="Get Quotation" id="bt">
+           </div>
+
+        </div>
+    </div>
+</div>
+</div>
+    <div class="contact">
+        <div id="us">
+            <center>
+            <h1>CONTACT US</h1>
+        </center>
+        </div>
+        <div id="fm">
+        <div id="cnm">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d475.63353181738745!2d78.41535210599459!3d17.504254937208675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1701857947238!5m2!1sen!2sin" width="569" height="315" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div id="cnf">
+            <div id="cnf1"></div>
+            <div id="cnf2"></div>
+            <div id="cnf3"></div>
+        </div>
+        </div>
+    </div>
+    <div id="footer"></div>
+    
+</body>
+</html>
